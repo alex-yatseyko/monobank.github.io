@@ -1,0 +1,258 @@
+@import "~bootstrap/scss/bootstrap";
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.logo {
+  max-width: 100px;
+}
+
+.App {
+  min-height: 100vh;
+  padding: 4rem 2rem;
+}
+
+.App > .container {
+  border-radius: 25px;
+}
+
+#navbar-primary-collapse {
+  justify-content: center;
+}
+
+.navbar-nav {
+  align-items: center;
+  flex-basis: 860px;
+  justify-content: space-around;
+}
+.navbar-toggler {
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  transform: scale(1.5);
+  filter: invert(1);
+}
+.navbar-dark .navbar-toggler, .navbar-dark .navbar-toggler:focus{
+  border: none;
+  outline: none;
+}
+
+.App {
+  background-image: linear-gradient(242deg, #d99c9d, #8677d9 51%, #6072cc);
+}
+.btn-wrap {
+  position: relative;
+  background: linear-gradient(242deg, #d99c9d, #8677d9 51%, #6072cc);
+  padding: 3px;
+  width: fit-content;
+  border-radius: 5px;
+  margin: auto;
+}
+.btn-mono {
+  background: #e9ecef;
+  transition: .5s;
+  border: none;
+}
+.btn-mono:hover {
+  background: linear-gradient(242deg, #d99c9d, #8677d9 51%, #6072cc);
+  color: #fff;
+}
+.btn:focus, .btn.focus {
+  outline: 0;
+  box-shadow: none;
+}
+.exchange-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.exchange-col img {
+  max-width: 40px;
+  cursor: pointer;
+  transition: .7s;
+}
+// .exchange-col img:active {
+//   transform: scale(1.2);
+// }
+.exchange-row {
+  justify-content: center;
+}
+.rotated {
+  transform: rotate(180deg);
+}
+.reversed {
+  flex-direction: row-reverse;
+}
+.ua-currency {
+  font-size: 21px;
+  margin-bottom: 0;
+  flex: 1.3;
+  margin-left: 24px;
+  text-align: left;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 0;
+}
+.form-group input, .form-group select {
+  flex: 1;
+  border: none;
+  background: transparent;
+}
+.form-group select {
+  font-size: 21px;
+  flex: 1.3;
+}
+.form-group input {
+  font-size: 28px;
+}
+.form-group .row {
+  align-items: center;
+}
+.form-group input:focus, .form-group select:focus {
+  outline: 0;
+  box-shadow: none;
+  background: 0;
+}
+.col-md-5 {
+  background: #fff;
+  border-radius: 5px;
+  padding: 2rem;
+}
+
+.navbar-expand-lg .navbar-collapse {
+  justify-content: center;
+}
+
+@media screen and (max-width: 992px) {
+  .logo {
+    position: relative;
+    right: 0;
+    left: 0;
+    margin: auto;
+    max-width: 75px;
+    top: -25px;
+  }
+  .logo-desktop {
+    display: none;
+  }
+  .lang-menu {
+    transform: scale(1.5);
+  }
+  .exchange-col {
+    padding: 20px;
+  }
+  .exchange-col img {
+    transform: rotate(90deg);
+  }
+  .rotated {
+    transform: rotate(270deg);
+  }
+  .reversed {
+    flex-direction: column-reverse;
+  }
+  .form-group select, .ua-currency {
+    font-size: 14px;
+  }
+}
+
+
+
+.social-wide__button {
+  margin-top: 8px;
+  text-align: center;
+  height: 40px;
+  border-radius: 100px;
+  line-height: 40px;
+  background-color: #ccc;
+  font-weight: 700;
+  -webkit-transition: background-color .3s linear,color .3s linear;
+  transition: background-color .3s linear,color .3s linear;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.viber-color-button {
+  background-color: #f9f0ff;
+  color: #8861b2;
+}
+.messenger-color-button {
+  background-color: #edf6ff;
+  color: #4c98f7;
+}
+.telegram-color-button {
+  background-color: #e7f7ff;
+  color: #4ba4e8;
+}
+.apple-color-button {
+  background-color: #eaf4ff;
+  color: #298fff;
+}
+.contact .col-md-3 img {
+  max-width: 100px;
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+}
+.lds-dual-ring:after {
+  content: ' ';
+  display: block;
+  width: 46px;
+  height: 46px;
+  margin: 1px;
+  border-radius: 50%;
+  border: 5px solid #6072cc;
+  border-color: #6072cc transparent #6072cc transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.list-group {
+  border-radius: 25px;
+}
+.list-group-item {
+  display: flex;
+  justify-content: space-around;
+  background-color: #343a40;
+  color: #fff;
+  border-color: #454d55;
+}
+.list-group-item p {
+  flex: 1;
+}
+.navbar-nav .nav-item {
+  flex: 1;
+}
+.lang-menu {
+  position: absolute;
+  transform: scale(1.2);
+  top: 5px;
+}
+.lang-menu img {
+  margin: 3px;
+  cursor: pointer;
+}
